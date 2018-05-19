@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="js/FlexSlider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <title>登入/註冊</title>
+</head>
+<body>
+<header></header>
+<div id="main">
+    <div id="login">
+      <div class="left">
+        <h1>會員登入</h1>
+        <div class="content">              
+               <form id="loginForm" name="loginForm" method="POST" action=" ">
+                    <div class="detail"> 
+                        <img src="img/login/id.png" alt="">           
+                        <input type="text" name="mem_mail" id="mem_mail" placeholder="請輸入email" required />
+                    </div>
+                    <div class="detail"> 
+                        <img src="img/login/key.png" alt="">         
+                        <input type="password" name="mem_pwd" id="mem_pwd" placeholder="密碼6個英數字元" required />
+                    </div>
+                    <div class="detail nb">         
+                        <input type="password" name="mem_pwd" id="check" required />
+                        <span>請輸入驗證碼</span>
+                        <img class="check" src="" alt=""> 
+                        <img src="img/login/button.png" alt=""> 
+                    </div>
+                    <div class="detail nb f"> 
+                        <input type="checkbox" id="choice"/>
+                        <label for="choice">記得我</label>
+                        <a id="forgotPassword">忘記密碼</a>
+                    </div>
+                    <input type="hidden" name="checkoutPage" id="checkoutPage" value="1" />
+               </form>
+               <div id="row1"><!--訊息EX:尚未註冊、密碼錯誤、尚未EMAIL驗證--></div>
+               <div class="row2">
+                    <a href=""><img src="img/login/fb.png" alt=""></a>
+                    <input type="submit" name="" id="addBtn" value="確認送出" /> 
+               </div>
+               <img src="img/login/register_y.png" alt="">
+         </div>
+    </div>
+      <div class="right">
+       <h1>立即註冊</h1>
+       <div class="content">
+           <form id="addMember" name="addMember" method="POST" action="">
+                <div class="detail"> 
+                        <img src="img/login/id.png" alt="">           
+                        <input type="text" name="mem_mail" id="mem_mail" placeholder="請輸入email" required />
+                    </div>
+                    <div class="detail"> 
+                        <img src="img/login/key.png" alt="">         
+                        <input type="password" name="mem_pwd" id="mem_pwd" placeholder="密碼6個英數字元" required />
+                    </div> 
+                    <div class="detail"> 
+                        <img src="img/login/key.png" alt="">         
+                        <input type="password" name="mem_pwdc" id="mem_pwdc" placeholder="再次確認密碼" required />
+                    </div>
+                    <div class="detail"> 
+                        <img src="img/login/phone.png" alt="">         
+                        <input type="password" name="mem_ph" id="mem_ph" placeholder="手機號碼" required />
+                    </div>
+                    <div class="detail nb">         
+                        <input type="password" name="mem_pwd" id="check" required />
+                        <span>請輸入驗證碼</span>
+                        <img class="check" src="" alt=""> 
+                        <img src="img/login/button.png" alt=""> 
+                    </div>
+                <div id="addMemMsg4"></div>
+                <input type="hidden" name="" value="addMember">
+                <img src="img/login/register.png" alt="">
+                <img src="img/login/login_y.png" alt="">
+           </form>
+       </div>     
+    </div>    
+    </div>
+    <div class="inf">
+        <img src="img//login/inf.png" alt="">
+        <div class="inf_p">
+            <p>您所填寫的會員基本資料，愛期股均遵守中華民國「電腦處理個人資料保護法」予以保障。</p>
+            <ul>
+                <li>◎ 本會員註冊係由愛期股舉辦，並蒐集、處理、利用個人資料。</li>
+                <li>◎ 蒐集目的：講座參加、身分確認、會員管理、客戶管理、聯絡通知、行銷與統計調查與分析等。</li>
+                <li>◎ 個人資料類別：姓名、性別、電話、Email。</li>
+                <li>◎ 個人資料利用期間：本公司營運期間。</li>
+                <li>◎ 個人資料利用地區：本公司營運地區及愛期股網站服務提供範圍。</li>
+                <li>◎ 利用對象及方式：您的個人資料將由愛期股網站在蒐集目的之關聯範圍內予以利用(包括但不限於交付合作廠商及郵寄單位於蒐集目的範圍內利用)。</li>
+                <li>◎ 您享有個資法第3條之權利：查詢或請求閱覽、請求製給複製本、請求補充或更正、請求停止蒐集、 處理或利用。</li>
+                <li>◎ 若您未能提供個人資料，將無法完成註冊成為本站會員。</li>
+            </ul>
+        </div>
+        <div class="row2">
+            <input type="checkbox" id="agree" required/>
+            <label for="agree" >同意以上會員條款</label>
+        </div>
+        <input type="submit" name="" id="btnLogin" value="確認送出" />
+    </div>
+    <div class="show1">
+        <div class="detail"> 
+            <img src="img/login/id.png" alt="">           
+            <input type="text" name="mem_mail" id="mem_mail" placeholder="請輸入email" required />
+        </div>
+        <div class="detail nb">         
+            <input type="password" name="mem_pwd" id="check" required />
+            <span>請輸入驗證碼</span>
+            <img class="check" src="" alt="">
+            <img src="img/login/button.png" alt=""> 
+        </div>
+        <div class="bottom">
+            <input type="submit" name="submitbtn" class="c btn" value="送出" />
+        </div>
+        <div class="back"> ↩ 返回會員登入</div>    
+    </div> 
+</div>
+<footer></footer>
+<script>
+
+    $('#login .right .content form>img:nth-of-type(1)').click(function(){
+        $('#login').hide();
+        $('.inf').show();
+    });
+    
+    $('#forgotPassword').click(function(){
+        $('.show1').toggle();
+        $('#login').toggle();
+    });
+    
+    $('.back').click(function(){
+        $('#login').fadeIn(700);
+        $('.show1').hide();
+    });
+    //
+    var $W= $(window).width();
+   if($W<=700){
+       $('#login .right').hide();
+            $('#login .left .content>img').click(function(){
+                $('#login .right').show();
+                $('#login .left').hide();
+            });    
+                $('#login .right .content form>img:nth-of-type(2)').click(function(){
+                    $('#login .right').hide();
+                $('#login .left').show();
+                });
+       }
+    if($W>700){
+                $('#login .right').show();
+                $('#login .left').show();
+    }
+    $(window).resize(function(){
+        var $W= $(window).width();
+   if($W<=700){
+       $('#login .right').hide();
+            $('#login .left .content>img').click(function(){
+                $('#login .right').show();
+                $('#login .left').hide();
+            });    
+                $('#login .right .content form>img:nth-of-type(2)').click(function(){
+                    $('#login .right').hide();
+                $('#login .left').show();
+                });
+       }
+    if($W>700){
+                $('#login .right').show();
+                $('#login .left').show();
+    }
+    });
+
+</script>
+</body>
+</html>
